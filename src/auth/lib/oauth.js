@@ -53,6 +53,4 @@ const authorize = (req) => {
     .catch(error=>error);
 };
 
-
-
 export default {authorize};
