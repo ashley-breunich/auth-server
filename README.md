@@ -1,6 +1,9 @@
 # Lab 14 Auth Server
 
-Write a description of the project in your README.md, including detailed instructions for how to build your app. In your frontend README.md add a code block with your frontend .env vars, and in your backend README.md add a code block with your backend .env vars.
+## Getting Started
+
+In order to use this program, a user would need to fork this repo and clone it down from their machine. They can use [this](https://github.com/ashley-breunich/auth-server) link to access the repository. They would need to install the dependencies (npm install) before beginning. 
+
 
 #### .env Variables
 ```
@@ -10,7 +13,7 @@ MONGODB_URI=mongodb://heroku_jzbktcp7:lm32lnfpdon634jb4niltvjv4m@ds159263.mlab.c
 CLIENT_URI=http://localhost:3000/
 API_URL=http://localhost:3000
 
-GITHUB_TOKEN=402986fcb4a77f0b0de558cdf1db1571f452033c
-GITHUB_CLIENT_ID=90548d79f78808b3be09
-GITHUB_CLIENT_SECRET=f589ba76fa443113b063d4288f6363332b232607
+GITHUB_TOKEN=DON'T WANT TO ADD
+GITHUB_CLIENT_ID=DON'T WANT TO ADD
+GITHUB_CLIENT_SECRET=DON'T WANT TO ADD
 ```
