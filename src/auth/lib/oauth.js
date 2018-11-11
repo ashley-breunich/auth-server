@@ -18,12 +18,12 @@ const authorize = (req) => {
   console.log('(1) code', code);
 
   // exchange the code or a token
-  return superagent.post('https://www.googleapis.com/oauth2/v4/token')
+  return superagent.post('https://github.com/login/oauth/access_token')
     .type('form')
     .send({
       code: code,
-      client_id: process.env.GOOGLE_CLIENT_ID,
-      client_secret: process.env.GOOGLE_CLIENT_SECRET,
+      client_id: process.env.GITHUB_CLIENT_ID,
+      client_secret: process.env.GITHUB_CLIENT_SECRET,
       redirect_uri: `${process.env.API_URL}/oauth`,
       grant_type: 'authorization_code',
     })
@@ -34,7 +34,7 @@ const authorize = (req) => {
     })
   // use the token to get a user
     .then ( token => {
-      return superagent.get('https://www.googleapis.com/plus/v1/people/me/openIdConnect')
+      return superagent.get('https://api.github.com/user')
         .set('Authorization', `Bearer ${token}`)
         .then (response => {
           let user = response.body;
@@ -52,7 +52,5 @@ const authorize = (req) => {
     })
     .catch(error=>error);
 };
-
-
 
 export default {authorize};
